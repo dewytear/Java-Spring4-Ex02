@@ -1,0 +1,43 @@
+[스프링 MVC 흐름과 주요 구성 컴포넌트]
+
+	1) client				------>		Dispatcher Servlet
+		- 요청을 수신
+
+	2) Dispatcher Servlet	------>		Handler Mapping
+		- Handler Mapping이 컨트롤러 정의(Controller를 정해줌) : 컨트롤러를 지정해주는 컨트롤러
+
+	3) Dispatcher Servlet	------>		Handler Adapter
+		- Handler Adapter가 요청을 Controller에게 전송
+
+	4) Controller(handler)	------>		Handler Adapter
+		- 요청 결과와 View에 대한 정보를 return
+
+	5) Handler Adapter		------>		Dispatcher Servlet
+		- [Model & View] 객체를 만들어서 전달
+
+	6) Dispatcher Servlet	------>		View Resolver
+		- 응답할 View를 요청
+
+	7) Dispatcher Servlet	------>		View
+		- View를 이용해서 응답
+
+	핸들러 == 컨트롤러
+	핸들러 매핑		------>		핸들러 어댑터(일대일 매핑)를 찾아서 컨트롤러를 부른다.
+
+
+[컨트롤러 제작 순서]
+최초의 클라이언트의 요청이 들어오면 컨트롤러로 진입을한다.
+컨트롤러는 요청에 대한 작업처리를 한 후에 View에 데이터를 전달한다.
+
+	1) @Controller를 이용한 클래스 생성
+	2) @RequestMapping을 이용한 요청경로를 매핑
+	3) 요청 처리 메소드를 구현(요청처리 메소드 제작)
+	4) 뷰이름을 리턴
+
+
+[ModelAndView 객체를 이용한 데이터 전달]
+
+	1) ModelAndView 객체를 생성
+	2) model 객체에 데이터를 추가
+	3) 뷰이름을 설정(setViewName()을 이용)
+
