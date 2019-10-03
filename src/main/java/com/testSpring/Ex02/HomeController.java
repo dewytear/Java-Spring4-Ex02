@@ -69,7 +69,7 @@ public class HomeController {
 		return "member/test2";
 	}//test2()
 
-	//person 객체를 Model에 전달하여 view를 호출
+	//person class 객체를 Model에 전달하여 view를 호출
 	/*
 	 * @RequestMapping("member/join")
 	 * public String personInfo(@RequestParam("name") String name,
@@ -86,7 +86,7 @@ public class HomeController {
 	 * return "member/join"; }
 	 */
 
-	//person 객체를 바로 전달하여 view를 호출
+	//person calss 객체를 바로 전달하여 view를 호출
 	@RequestMapping("member/join")
 	public String personInfo(Person person) {
 
