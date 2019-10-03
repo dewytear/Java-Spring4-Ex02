@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -38,6 +39,7 @@ public class HomeController {
 		return "home";
 	}//home()
 
+	//HttpServletRequest 를 사용하여 Parameter를 받는 방법 예제
 	@RequestMapping("member/test1")
 	public String test(HttpServletRequest httpServletRequest, Model model) {
 		String company = httpServletRequest.getParameter("company");
@@ -56,4 +58,38 @@ public class HomeController {
 		return "member/test1";
 	}//test()
 
+	//Annotation 을 사용하여 Parameter를 받는방법
+	@RequestMapping("member/test2")
+	public String test2(@RequestParam("id") String id, @RequestParam("name") String name, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("name", name);
+
+		//아래 URL처럼 파라메터 전달하여 확인!
+		//http://localhost:9090/Ex02/member/test2?id=test&name=test2
+		return "member/test2";
+	}//test2()
+
+	//person 객체를 Model에 전달하여 view를 호출
+	/*
+	 * @RequestMapping("member/join")
+	 * public String personInfo(@RequestParam("name") String name,
+	 * @RequestParam("id") String id,
+	 * @RequestParam("address") String address,
+	 * @RequestParam("email") String email, Model model) {
+	 *
+	 * Person person = new Person(); person.setName(name); person.setId(id);
+	 * person.setAddress(address); person.setEmail(email);
+	 *
+	 * model.addAttribute("personInfo", person);
+	 *
+	 * //http://localhost:9090/Ex02/member/join?name=RONY&id=dewytear&address=seoul&email=dewytear@naver.com
+	 * return "member/join"; }
+	 */
+
+	//person 객체를 바로 전달하여 view를 호출
+	@RequestMapping("member/join")
+	public String personInfo(Person person) {
+
+		return "member/join";
+	}
 }
