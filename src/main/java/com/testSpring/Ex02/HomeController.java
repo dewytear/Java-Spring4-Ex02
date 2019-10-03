@@ -50,7 +50,7 @@ public class HomeController {
 		model.addAttribute("id", id);
 		model.addAttribute("pw", pw);
 
-		//아래 URL처럼 파라메터 전달하여 확인
+		//아래 URL처럼 파라메터 전달하여 확인!
 		//http://localhost:9090/Ex02/member/test1?company=test&group=test&id=dewytear&pw=1234567
 
 		return "member/test1";
