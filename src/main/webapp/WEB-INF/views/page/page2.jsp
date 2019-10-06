@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>PATH Variable</title>
+<title>Insert title here</title>
 </head>
 <body>
-
-	<h2>경로상의 변수(PATH Variable)를 받아와 View에 전달 하는 Page입니다.</h2>
-	이름 : ${personInfo}
-
+	<h2>PathVariable 에 따라 페이지가 다르게 열리는 테스트 페이지 입니다.</h2>
+	<h3>두번째 페이지 입니다.</h3>
 </body>
 </html>

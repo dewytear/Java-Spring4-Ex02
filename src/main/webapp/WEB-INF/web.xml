@@ -30,7 +30,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<!-- 한글설정 처리를 위한 부분	-->
+	<!-- 한글설정 START	-->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>
