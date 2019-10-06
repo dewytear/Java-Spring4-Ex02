@@ -13,9 +13,9 @@ public class PathVariableEx {
 		String ViewName = "";
 
 		// 호출하는 주소(var)에 따라 여는 페이지를 다르게 지정
-		if(var.equals("one")) {
+		if (var.equals("one")) {
 			ViewName = "page/page1";
-		}else if(var.equals("two")) {
+		} else if (var.equals("two")) {
 			ViewName = "page/page2";
 		}
 
