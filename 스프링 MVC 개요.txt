@@ -73,6 +73,7 @@ Request요청을 보낼때 GET방식으로 하는방법과 POST 방식으로 하
 	* Idempotent(멱등) : 연산의 한 성질을 나타내는 것으로, 연산을 여러 번 적용하더라도 결과가 달라지지 않는 성질
 
 
+[ModelAttribute]
 
 
 
