@@ -28,7 +28,7 @@ public class UserController {
 			System.out.println("@ModelAttribute(): GET..........");
 
 			UserVO userVO = new UserVO();
-			System.out.println("객체 생성...");
+			System.out.println("객체 생성...!");
 
 			userVO.setUserName("이름을 입력하세요..");
 			userVO.setAddress("주소를 입력하세요..");
