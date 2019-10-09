@@ -68,7 +68,7 @@ public class UserController {
 		System.out.println("------------------- userSave -------------------");
 		System.out.println("user : " + userVO.toString());
 
-		model.addAttribute("msg", "회원정보 출력 성공!");
+		model.addAttribute("msg", "회원정보 출력 성공!!");
 
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("user/userInfo2");
